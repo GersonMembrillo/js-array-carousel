@@ -11,12 +11,6 @@ MILESTONE 3
 Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
 */
 
-/*
-<div class="slide active">
-	<img src="./img/01.webp" alt="spiderman" />
-</div>
- */
-
 const images = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 
 const slider = document.querySelector('.slider');
