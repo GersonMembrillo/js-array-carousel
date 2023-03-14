@@ -20,17 +20,26 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 const images = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 
 const slider = document.querySelector('.slider');
-let currentImageIndex = 0;
+const thumber = document.querySelector('.thumber');
+
+let currentImageMain = 0;
+let currentImageSide = 0;
 let slides = '';
+let thumbs = '';
 for (let i = 0; i < images.length; i++) {
 	slides += `<div class="slide">
+	<img src="${images[i]}" alt="game-${i}">
+</div>`;
+	thumbs += `<div class="thumb">
 	<img src="${images[i]}" alt="game-${i}">
 </div>`;
 }
 
 slider.innerHTML += slides;
+thumber.innerHTML += thumbs;
 
-document.querySelectorAll('.slide')[currentImageIndex].classList.add('active');
+document.querySelectorAll('.slide')[currentImageMain].classList.add('active');
+document.querySelectorAll('.thumb')[currentImageSide].classList.add('inner-border');
 
 const down = document.querySelector('.down');
 const up = document.querySelector('.up');
@@ -38,23 +47,31 @@ const up = document.querySelector('.up');
 down.addEventListener('click', goDown);
 
 function goDown() {
-	document.querySelectorAll('.slide')[currentImageIndex].classList.remove('active');
-	if (currentImageIndex === images.length - 1) {
-		currentImageIndex = 0;
+	document.querySelectorAll('.slide')[currentImageMain].classList.remove('active');
+	document.querySelectorAll('.thumb')[currentImageSide].classList.remove('inner-border');
+	if (currentImageMain === images.length - 1 && currentImageSide === images.length - 1) {
+		currentImageMain = 0;
+		currentImageSide = 0;
 	} else {
-		currentImageIndex++;
+		currentImageMain++;
+		currentImageSide++;
 	}
-	document.querySelectorAll('.slide')[currentImageIndex].classList.add('active');
+	document.querySelectorAll('.slide')[currentImageMain].classList.add('active');
+	document.querySelectorAll('.thumb')[currentImageSide].classList.add('inner-border');
 }
 
 up.addEventListener('click', goUp);
 
 function goUp() {
-	document.querySelectorAll('.slide')[currentImageIndex].classList.remove('active');
-	if (currentImageIndex === 0) {
-		currentImageIndex = images.length - 1;
+	document.querySelectorAll('.slide')[currentImageMain].classList.remove('active');
+	document.querySelectorAll('.thumb')[currentImageSide].classList.remove('inner-border');
+	if (currentImageMain === 0 && currentImageMain === 0) {
+		currentImageMain = images.length - 1;
+		currentImageSide = images.length - 1;
 	} else {
-		currentImageIndex--;
+		currentImageMain--;
+		currentImageSide--;
 	}
-	document.querySelectorAll('.slide')[currentImageIndex].classList.add('active');
+	document.querySelectorAll('.slide')[currentImageMain].classList.add('active');
+	document.querySelectorAll('.thumb')[currentImageSide].classList.add('inner-border');
 }

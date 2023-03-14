@@ -1,6 +1,9 @@
 #wrapper {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider {
@@ -15,12 +18,58 @@
   display: none;
 }
 
-.slide img {
+.slide img{
   width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
+.thumb img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.thumber {
+  width: 160px;
+  height: 500px;
+  background-color: red;
+    position: relative;
+}
+
+.thumb {
+  width: 160px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* .opacity {
+  background-color: rgba(0, 0, 0, 0.5)
+} */
+
+.inner-border {
+  outline: 5px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -5px;
+  background-color: none;
+}
+
+
 .slide.active {
   display: block;
+}
+
+button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 43%;
+}
+
+.up{
+  top: 0;
+}
+
+.down{
+  bottom: 0;
 }
