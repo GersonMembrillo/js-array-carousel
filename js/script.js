@@ -13,8 +13,8 @@ Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, c
 
 const images = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 
-const slider = document.querySelector('.slider');
-const thumber = document.querySelector('.thumber');
+const sliders = document.querySelector('.slideContainer');
+const thumbnails = document.querySelector('.thumbContainer');
 
 let currentImage = 0;
 let slides = '';
@@ -28,8 +28,8 @@ for (let i = 0; i < images.length; i++) {
 </div>`;
 }
 
-slider.innerHTML += slides;
-thumber.innerHTML += thumbs;
+sliders.innerHTML += slides;
+thumbnails.innerHTML += thumbs;
 
 document.querySelectorAll('.slide')[currentImage].classList.add('active');
 document.querySelectorAll('.thumb')[currentImage].classList.add('inner-border');
