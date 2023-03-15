@@ -23,16 +23,11 @@
   object-fit: cover;
 }
 
-.thumb img {
-  width: 100%;
-  height: 100px;
-  object-fit: cover;
-}
-
 .thumber {
   width: 160px;
   height: 500px;
     position: relative;
+    background-color: black;
 }
 
 .thumb {
@@ -42,15 +37,19 @@
   outline-offset:-50px;
 }
 
-.inner-border {
-  outline: 5px solid rgba(255, 255, 255, 0.5);
-  outline-offset: -5px;
-  background-color: none;
+.thumb img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
 }
-
 
 .slide.active {
   display: block;
+}
+
+.inner-border {
+  outline: 5px solid rgba(255, 255, 255, 0.5);
+  outline-offset: -5px;
 }
 
 button {
