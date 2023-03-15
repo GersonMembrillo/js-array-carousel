@@ -39,8 +39,7 @@
 .thumb {
   width: 100%;
   height: calc(100% / 5);
-  outline: 50px solid rgba(0, 0, 0, 0.5);
-    outline-offset: -50px;
+  opacity: 0.4;
 }
 
 .slide.active {
@@ -48,6 +47,7 @@
 }
 
 .inner-border {
+  opacity: 1;
   outline: 5px solid rgba(255, 255, 255, 0.5);
   outline-offset: -5px;
 }
@@ -58,6 +58,7 @@ button {
   border: none;
   position: absolute;
   right: 43%;
+  z-index: 1000;
 }
 
 .up{
